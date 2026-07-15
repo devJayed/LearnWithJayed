@@ -1,32 +1,33 @@
 import { Button } from "@/components/ui/button";
+import { SectionWrapper } from "@/components/ui/section-background";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { useI18n } from "@/i18n/i18n-context";
 import { MapPin } from "lucide-react";
 
 export function LocationSection() {
+  const { content: t } = useI18n();
   return (
-    <section className="section-padding bg-card">
+    <SectionWrapper variant="grid" className="bg-background">
       <div className="container grid items-center gap-10 lg:grid-cols-2">
         {/* Left Side */}
         <div className="space-y-6">
           <SectionHeading
             align="left"
-            eyebrow="Offline Location"
-            title="Join classes at Jhiltuli, Faridpur"
-            description="The location section is prepared for your map integration while keeping the landing page lightweight and asset-free for now."
+            eyebrow={t.location.eyebrow} title={t.location.title} description={t.location.description}
           />
           <div className="rounded-lg border bg-background p-5">
             <div className="flex items-start gap-3">
               <MapPin className="mt-1 size-5 text-primary" />
               <div>
-                <h3 className="font-bold"> Opposite of Rainbow School, Parthib Niloy Tower (1st Floor), Jhiltuli, Faridpur</h3>
+                <h3 className="font-bold">{t.location.address}</h3>
                 <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                  Offline HSC ICT batches are offered for students near this location.
+                  {t.location.detail}
                 </p>
               </div>
             </div>
           </div>
           <Button asChild variant="outline">
-            <a href="#contact">Contact for Direction</a>
+            <a href="#contact">{t.location.cta}</a>
           </Button>
         </div>
         {/* Right Side */}
@@ -42,6 +43,6 @@ export function LocationSection() {
   />
 </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

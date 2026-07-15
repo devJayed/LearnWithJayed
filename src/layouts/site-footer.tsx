@@ -1,7 +1,9 @@
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { navigationLinks } from "@/constants/navigation";
+import { useI18n } from "@/i18n/i18n-context";
 
 export function Footer() {
+  const { content: t } = useI18n();
   return (
     <footer id="contact" className="border-t bg-card">
       <div className="container grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
@@ -10,8 +12,7 @@ export function Footer() {
             LearnWith<span className="text-primary">Jayed</span>
           </a>
           <p className="max-w-md text-sm leading-6 text-muted-foreground">
-            A focused ICT learning platform for HSC students, combining structured offline batches
-            with a scalable online LMS roadmap.
+            {t.footer.description}
           </p>
           <div className="flex gap-3">
             {[
@@ -32,22 +33,22 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-4 text-sm font-bold uppercase tracking-normal">Quick Links</h2>
+          <h2 className="mb-4 text-sm font-bold uppercase tracking-normal">{t.footer.quickLinks}</h2>
           <nav className="grid gap-3">
             {navigationLinks.map((link) => (
               <a key={link.href} href={link.href} className="text-sm text-muted-foreground hover:text-primary">
-                {link.label}
+                {t.nav[link.key]}
               </a>
             ))}
           </nav>
         </div>
 
         <div>
-          <h2 className="mb-4 text-sm font-bold uppercase tracking-normal">Contact</h2>
+          <h2 className="mb-4 text-sm font-bold uppercase tracking-normal">{t.footer.contact}</h2>
           <address className="space-y-3 text-sm not-italic text-muted-foreground">
-            <p>Faridpur Zhituli, Bangladesh</p>
+            <p>{t.footer.address}</p>
             <p>learnwithjayed.com</p>
-            <p>Admission desk opening soon</p>
+            <p>{t.footer.admission}</p>
           </address>
         </div>
       </div>

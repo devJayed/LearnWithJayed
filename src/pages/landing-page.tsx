@@ -3,9 +3,10 @@ import { AvailableBatchesSection } from "@/features/landing/components/available
 import { ExamsSection } from "@/features/landing/components/exams-section";
 import { FaqSection } from "@/features/landing/components/faq-section";
 import { HeroSection } from "@/features/landing/components/hero-section";
-import { LearningProcessSection } from "@/features/landing/components/learning-process-section";
+// import { LearningProcessSection } from "@/features/landing/components/learning-process-section";
 import { LectureSheetSection } from "@/features/landing/components/lecture-sheet-section";
 import { LocationSection } from "@/features/landing/components/location-section";
+import { PracticalSection } from "@/features/landing/components/practical-section";
 import { SpecialSessionSection } from "@/features/landing/components/special-session-section";
 import { StatsSection } from "@/features/landing/components/stats-section";
 import { WhyLearnSection } from "@/features/landing/components/why-learn-section";
@@ -20,12 +21,13 @@ export function LandingPage() {
       <HeroSection />
       <StatsSection />
       <WhyLearnSection />
-      <LocationSection />
+      <PracticalSection />
       <LectureSheetSection />
       <ExamsSection />
+      <LocationSection />
       <SpecialSessionSection />
       <AvailableBatchesSection />
-      <LearningProcessSection />
+      {/* <LearningProcessSection /> */}
       <FaqSection />
     </>
   );

@@ -1,7 +1,3 @@
 export const navigationLinks = [
-  { label: "Home", href: "#home" },
-  // { label: "Courses", href: "#courses" },
-  { label: "Batches", href: "#batches" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { key: "home", href: "#home" }, { key: "batches", href: "#batches" }, { key: "about", href: "#about" }, { key: "contact", href: "#contact" },
 ] as const;

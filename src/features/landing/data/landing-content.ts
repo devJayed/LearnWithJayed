@@ -2,7 +2,7 @@ import { BookOpenCheck, CalendarDays, ClipboardCheck, GraduationCap, MapPin, Tar
 
 export const stats = [
   { label: "Students", value: "100+" },
-  { label: "Courses", value: "03+" },
+  // { label: "Courses", value: "03+" },
   { label: "Batches", value: "11+" },
   { label: "Success Rate", value: "100%" },
   { label: "Years of Experience", value: "12+" },
